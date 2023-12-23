@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 20px;
+    font-family: "AlmarenaDisplayRegular", sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+    background-color: #04395E;
+}
+
+.header, .personal, .reason, .goal{
+    width: 100%;
+}
+
+.header{
+    background-color: #031D44;
+    color: white;
+    padding: 25px 20px 25px 20px;
+}
+
+a{
+    text-decoration: none;
+    /* color: #D5896F; */
+}
+
+.personal, .reason, .goal{
+    padding: 10px 20px 10px 20px;
+}
+
+.header > nav > ul > li{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin-top: 15px;
+}
+
+.header > nav > ul a{
+   /* color: white; */
+   color: #D5896F;
+}
+
+.personal > h3, .personal> ul, .reason > p, .goal > p{
+    margin-top: 10px;
+}
+
+li{
+    margin-top: 8px;
+}
+
+
+@media (min-width: 768px){
+    body{
+        height: 100vh;
+        /* background-color: black; */
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 70px auto auto auto;
+    }
+
+    .header{
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 1;
+    }
+
+    .personal{
+        grid-column: 1/ span 2;
+        grid-row: 2/ span 2;
+    }
+
+    .reason{
+        grid-column: 3/ span 2;
+        grid-row: 2/ span 1;
+        background-color: #70A288;
+        color: #031D44;
+    }
+
+    .goal{
+        grid-column: 3/ span 2;
+        grid-row: 3/span 1;
+        background-color: #70A288;
+        color: #031D44;
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+    }
+
+    nav > h1{
+        grid-column: 1/span 1;
+    }
+
+    nav > ul{
+        grid-column: 2/span 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-self: end;
+    }
+
+    nav > ul > li{
+        border: 0;
+        margin-top: px;
+    }
+
+}
